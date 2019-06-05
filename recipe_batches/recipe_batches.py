@@ -11,7 +11,7 @@ def recipe_batches(recipe, ingredients):
     available_ingredients = list(ingredients.values())
 
     # If there are more values in the recipe than in the ingredients return 0
-    if len(needed_ingredients) != len(available_ingredients):
+    if len(needed_ingredients) > len(available_ingredients):
         return 0
 
     for i in range(0, len(needed_ingredients)):
@@ -27,5 +27,5 @@ if __name__ == '__main__':
     # Change the entries of these dictionaries to test
     # your implementation with different inputs
     recipe = { 'milk': 100, 'butter': 50, 'flour': 5 }
-    ingredients = { 'milk': 432, 'butter': 158, 'flour': 51 }
+    ingredients = { 'milk': 432, 'butter': 158, 'flour': 51, 'sugar': 42 }
     print("{batches} batches can be made from the available ingredients: {ingredients}.".format(batches=recipe_batches(recipe, ingredients), ingredients=ingredients))
