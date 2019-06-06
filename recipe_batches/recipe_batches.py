@@ -23,7 +23,7 @@ def recipe_batches(recipe, ingredients):
 
         for i in range(0, len(needed_ingredients)):
             # Divide value in available ingredients
-            batches.append(math.floor(available_ingredients[i] // needed_ingredients[i]))
+            batches.append(available_ingredients[i] // needed_ingredients[i])
 
             if min(batches) < 1:
                 return 0
